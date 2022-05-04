@@ -12,8 +12,8 @@ import eight from '../../images/gallery/eight.jpg';
 const NewArrival = () => {
     return (
         <div className='container mt-5 text-center'>
-            <h2 className='fw-bold'>New Arrival</h2>
-            <div className='gallery mt-5 '>
+            <h2 className='fw-bold'>Furniture Gallery</h2>
+            <div className='gallery mt-3 '>
                 <div>
                     <img src={one} alt="" />
                 </div>

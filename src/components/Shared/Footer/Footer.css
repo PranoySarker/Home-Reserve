@@ -1,0 +1,42 @@
+.foo-ter {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 10px
+}
+
+li {
+    list-style-type: none;
+}
+
+input {}
+
+.left {
+    width: 200px;
+    margin-left: 16rem;
+    margin-top: 3rem;
+    display: block;
+}
+
+.right {
+    width: 300px;
+    display: block;
+    margin-top: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .left {
+        width: 200px;
+        margin: 10px 10px;
+    }
+
+    .right {
+        width: 250px;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .right button {
+        margin-top: 5px;
+    }
+}
