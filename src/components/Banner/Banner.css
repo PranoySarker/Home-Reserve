@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card-design {
+    position: absolute;
+    width: 370px;
+    height: 366px;
+    margin-top: -25px;
+    margin-left: 110px;
+    border-radius: 20px;
+    z-index: 2;
+    background: rgba(225, 225, 225, 0.30);
+    backdrop-filter: blur(31px);
+    color: black;
+}
+
+.slider {
+    position: relative;
+    z-index: 1;
+}
