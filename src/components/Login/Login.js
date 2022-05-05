@@ -10,11 +10,11 @@ const Login = () => {
                 <h2 className='mb-3'>Please Login</h2>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control type="email" placeholder="Enter email" required />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" placeholder="Password" required />
                     </Form.Group>
 
                     <input type="submit" value="Submit" className='p-2' />
