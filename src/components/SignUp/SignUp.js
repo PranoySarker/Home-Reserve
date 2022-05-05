@@ -71,7 +71,7 @@ const SignUp = () => {
                     <input type="submit" value="Submit" className='p-2' />
 
 
-                    <p className=' mt-2'>Don't have an account?<Link to='/signup' className='text-primary px-2' style={{ textDecoration: 'none' }}>Sign-Up please</Link></p>
+                    <p className=' mt-2'>Already have an account?<Link to='/login' className='text-primary px-2' style={{ textDecoration: 'none' }}>Log-In please</Link></p>
                 </Form>
             </div>
             <SocialLogin></SocialLogin>
