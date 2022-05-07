@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
+
 const ItemDetails = () => {
     const { id } = useParams();
     const [inventory, setInventory] = useState({});
@@ -37,8 +38,30 @@ const ItemDetails = () => {
                 setIsReload(!isReload);
             })
     }
-    const handleDelivered = id => {
 
+
+    const handleDelivered = () => {
+        const { quantity, ...rest } = inventory;
+        const updateQuantity = quantity - 1;
+        // const newProduct = { quantity: updateQuantity, ...rest };
+        // setInventory(newProduct);
+
+        const url = `http://localhost:5000/inventory/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            body: JSON.stringify({
+                quantity: updateQuantity
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setIsReload(!isReload);
+            })
     }
     return (
         <div>
@@ -52,7 +75,7 @@ const ItemDetails = () => {
                     <h4>Company Name: {inventory.supplier}</h4>
                     <h4>Quantity: {inventory.quantity}</h4>
                     <p>{inventory.description}</p>
-                    <Button onClick={() => handleDelivered(inventory.id)}>Delivered</Button>
+                    <Button onClick={handleDelivered}>Delivered</Button>
                 </div>
             </div>
             <div >
