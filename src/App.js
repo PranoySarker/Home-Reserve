@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddNew from './components/AddNew/AddNew';
 import Home from './components/Home/Home';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import Login from './components/Login/Login';
@@ -25,6 +26,7 @@ function App() {
             <ItemDetails></ItemDetails>
           </PrivateRoute>
         }></Route>
+        <Route path='/additem' element={<AddNew></AddNew>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

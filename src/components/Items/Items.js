@@ -7,7 +7,6 @@ const Items = () => {
     const [inventories, setInventories] = useInventory([]);
 
     const sliced = inventories.slice(0, 6);
-    console.log(sliced);
 
     return (
         <div className='px-5 mt-5'>

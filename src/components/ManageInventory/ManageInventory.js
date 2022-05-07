@@ -55,6 +55,10 @@ const ManageInventory = () => {
                     }
                 </tbody>
             </Table>
+            <div className="d-grid gap-2 col-6 mx-auto mt-5">
+                <h4 className='text-center'>Add New Items </h4>
+                <button className="btn btn-primary" type="button" onClick={() => navigate('/additem')}>Click Here...</button>
+            </div>
         </div>
     );
 };
