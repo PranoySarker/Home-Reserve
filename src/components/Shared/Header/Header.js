@@ -30,7 +30,9 @@ const Header = () => {
                         <Nav>
                             {
                                 user ?
-                                    <Navbar.Text>
+                                    <Navbar.Text className='d-flex align-items-center'>
+                                        <Nav.Link as={Link} to='/additem'>Add Item</Nav.Link>
+                                        <Nav.Link as={Link} to='/' disabled>My Item</Nav.Link>
                                         <Nav.Link className='d-flex align-items-center'>
                                             <p className='mt-2 px-3'>{user.email}</p>
                                             <Button variant='secondary' onClick={logOut}>Log Out</Button>

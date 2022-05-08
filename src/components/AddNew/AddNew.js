@@ -19,7 +19,7 @@ const AddNew = () => {
             description: description
         }
 
-        fetch('http://localhost:5000/inventory', {
+        fetch('protected-earth-63464.herokuapp.com/://protected-earth-63464.herokuapp.com/inventory', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

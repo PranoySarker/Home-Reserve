@@ -9,7 +9,7 @@ const ItemDetails = () => {
     const [isReload, setIsReload] = useState(false);
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://protected-earth-63464.herokuapp.com/inventory/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setInventory(data))
@@ -20,7 +20,7 @@ const ItemDetails = () => {
         const quantity = event.target.quantity.value;
         console.log(quantity);
 
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://protected-earth-63464.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             body: JSON.stringify({
@@ -46,7 +46,7 @@ const ItemDetails = () => {
         // const newProduct = { quantity: updateQuantity, ...rest };
         // setInventory(newProduct);
 
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://protected-earth-63464.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             body: JSON.stringify({
